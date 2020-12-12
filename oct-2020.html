@@ -1,0 +1,666 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Release Notes - Oct 2020 Newsletter</title><style>
+
+/* My addition */
+.caption {
+	text-align: center;
+	margin-top: 0;
+	color: grey;
+	font-size: 0.9em;
+}
+	
+.subtitle {
+	font-size: 1.25em;
+	color: grey;
+}
+
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 700px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+}
+	
+header {
+	margin-bottom: 2em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3bac7e4a-39ae-48d5-baae-7200441cd811" class="page sans"><header><h1 class="page-title">Release Notes - Oct 2020 Newsletter</h1><p class="subtitle"><em>On content creation philosophy</em></p></header><div class="page-body"><p id="c1d481c8-6f77-497f-bbd9-1a94eb7b6084" class="">Yea, you read that right, this was supposed to be an October newsletter, as I sit here writing on the 22nd day of November.</p><p id="bdece9ef-d266-4985-8d0b-992db5197bde" class="">
+</p><p id="ec3e37c7-e86d-44a9-abb2-da1134262ec4" class="">I started working on the comic on November 7. Before this newsletter, I&#x27;ve never really drawn on Photoshop, e.g. my <a href="https://mailchi.mp/78b15894ea86/building-a-website-from-scratch-in-6-days-laura-gao-
+	ember-newsletter-3305662" target="_blank">September newsletter</a> had the lineart/stroke done in Illustrator and I copy pasted it into photoshop for assembling the panels and some colouring. (I did this because I had an inability to draw straight lines in Photoshop CS6 without brush smoothening, and in Illustrator you can manipulate the paths after drawn to make your lines more smooth.) </p><figure id="3acc463a-715c-44de-9745-847e416cf8ce" class="image"><a href="img/puzzle8-1.png"><img style="width:384px" src="img/puzzle8-1.png"/></a></figure><p id="b45c427d-fcbc-4098-a79f-065473d0116b" class="caption">More of my old Illustrator art</p><p id="533fd507-e4bd-4cc1-ac06-89f4fd1b2268" class="">
+</p><p id="7ad16ec9-f9f9-40c1-a0b1-8115281f0c15" class="">I originally started drawing the first frame of this newsletter comic in Illustrator, but - it wasn&#x27;t cutting it.</p><figure id="1b7e0165-ceda-441a-a87d-23b38e88dd21" class="image"><a href="img/1_old.png"><img style="width:384px" src="img/1_old.png"/></a></figure><p id="dd81f2e9-0551-4f34-a483-6dfbd2b29bbe" class="">
+</p><p id="4af12304-6c7a-4209-86c7-0f4166b257f7" class="">Workflow would be so much smoother if I could lineart and colour in the <em>same program</em>.</p><p id="4f764783-ba1b-40f3-879b-a910d71516a1" class="">
+</p><p id="38f80723-e52f-40b6-85d9-264536943f43" class="">
+</p><p id="203dc59c-762b-4256-bf5e-0ec861b53b07" class="">There&#x27;s something so cool about digital art that lured me since I was 12. I would spend hours watching timelapses and streams of artists drawing that I got a good understanding of the process: sketch, lineart, colour. </p><p id="8dfe0b7c-bd16-4e09-89dd-dc21d705e145" class="">So I, with close to zero art experience under my belt, attempted to make this comic. Yup, this was the first thing I ever drew in Photoshop that was not tracing over a stock picture.</p><p id="0124d801-d91c-478c-91f3-fa5e5cac19e3" class="">
+</p><figure id="ed8db4c7-94ae-4675-b9a4-c51f8bc3fd7b" class="image"><a href="img/1.png"><img style="width:480px" src="img/1.png"/></a></figure><p id="cbbbfa07-7457-4f87-98f4-06b431fae698" class="caption">The first legit picture I drew in Photoshop. Also the the third time I ever used a mixer brush</p><p id="7c6dbd1b-cfb2-49b6-9ef3-47c8ca8dcb4b" class="">
+</p><p id="3a55bd64-1eb0-4dd9-ab54-581d4111be99" class="">I basically played around and figured things out as I went, following what I think looks good, without looking at much tutorials - the same way I &quot;learned&quot; to make videos.</p><p id="03463f9f-f2e2-41d3-863b-12a356eca011" class="">So... yea. This is why it took me basically 2 weeks to draw this comic. Most of the newsletter delay was on the comic; I wrote all the other material in 3 hours.</p><p id="d988b77d-25fc-4f06-9818-d97fb079879b" class="">
+</p><p id="339453fd-b17d-4659-8320-ee9134aed53c" class="">Which brings me to...</p><p id="78513d06-a1b1-4d77-a761-eaf028ef7035" class="">
+</p><h2 id="fa0b7a74-dd53-4b69-b3aa-4f0989272a3c" class="">Why do I put comics in my newsletters?</h2><p id="e90c4d4d-f934-4848-a813-9718c3f48d23" class="">On a bright afternoon on a late September day, I was looking through my email. I clicked a few of my friends&#x27; newsletters open.</p><p id="f76bbbf6-0e16-412b-a863-98c9e7b8ffe6" class="">What I saw was: a lot of them had textwalls - paragraphs of text at once. Some had pictures with bullets underneath, which was a little easier to read. What I found was that my monkey brain defaults to scrolling and looking at pictures/headlines <em>only. </em>Most of the text - the paragraphs that they probably spend an hour meticulously editing - where skipped over.</p><p id="e8d9f69e-740b-4b85-94ac-2e4cb11ea95c" class="">I tried to be engaged. I read some newsletters to the end, but I didn&#x27;t have time to read every newsletter I got. (as I signed up for 10+ of my friends&#x27; newsletters.)</p><p id="3c3822e0-ed82-4506-988d-1d240a01ac4d" class="">I&#x27;m not proud of this. I know how much it sucks, for example, for people to not watch to the end a video you spend 40 hours on. I shouldn&#x27;t do this to other people. I should just read the dam thing. How hard can that be?</p><p id="9bb056e6-5edd-4d31-b233-fa52c1830896" class="">In the instant gratification culture of social media, the average human attention span has reduced to 7 seconds - less than that of a goldfish. I thought, probably no one really reads long newsletters to the end, or they scroll to the end without reading some of the text. <em>No one reads newsletters. Most of the text you write might not get read by anyone. </em>These thoughts haunted me.</p><p id="9796a5e7-07a3-4d7f-9ae0-1042607c61bb" class="">
+</p><p id="430c7d61-79f9-4e3d-92f6-45e0fb4acb9f" class="">During September, most people on my mailing lists were friends who probably subscribed to tens of newsletters. I didn&#x27;t want my newsletter to just be another wall of text in the pile of unreads in inboxes. </p><p id="7b196157-99c5-4568-998f-203bbe3f72c1" class="">I had the idea to draw a comic at the beginning, as the first thing that people see when they open the email. If I open an email and I see a comic, I&#x27;ll probably read the comic. And most people, I thought, would read through the comic too. The hope was that maybe they&#x27;ll continue on with the rest of the newsletter after the comic was done.</p><p id="59e762d3-42cc-414d-bae4-5669c822c891" class="">
+</p><p id="1d2ea97f-9b6f-48c2-a488-27dcccba4a00" class="">
+</p><p id="5f50c67f-f592-4df3-adb3-d0d861f310ad" class="">Now, you might say, what&#x27;s the point of spending several extra days making a comic that doesn&#x27;t even add value to your newsletter? To that I say, it does add value. A picture is a thousand words - and I believe art helps to better capture my general state of mind during the last month. And your self named newsletter is supposed to be all about how you spent your last month, right?</p><p id="334429bc-67c3-404c-8e68-6b4a510475c5" class="">Secondly, what&#x27;s the point of putting hours into a newsletter if no one is going to be engaged enough to read it?</p><p id="52f13a55-f05e-42d5-a783-d9fa837cd38d" class="">And thirdly, what&#x27;s the point of sending a newsletter, if your newsletter is the same as everyone else&#x27;s? A generic, standard templated newsletter won&#x27;t catch anyone&#x27;s eye. Won&#x27;t make people want to reach out to you or follow the links to see your other content. Won&#x27;t add to your portfolio. Won&#x27;t enhance your reader&#x27;s day.</p><p id="052f0a0c-c8ce-4e0e-8e97-38c45e951f5d" class="">My mailing list are people who chose to let me into the privacy of their inbox. I want them to get their worth. I don&#x27;t want my newsletter to be just another corporate ass trying to shove promo down their throat - we all get that enough already.</p><p id="28890a99-e7f6-4c20-bcc1-d56f80b306c9" class="">To that I say, quality &gt; quantity. At the end of the day, no one is going to care about whether you send something out late or not. That&#x27;s not what people remember. What people do remember is if they saw content that was unique and so above and beyond cool.</p><p id="0c4ea9bb-9a9e-440f-835b-90b45e23055b" class="">I never wanted <em>any</em> my content to be low effort. Maybe there is an appeal to daily uploads, but the appeal to CGP Grey videos lasts for years after the release date.</p><p id="8237801b-075d-4757-801b-39c026f1e940" class="">If I put out low effort content, I feel bad. It eats me up inside. I think of Grey, Kurzgesagt, Oversimplified, etc. videos and im like O.o </p><p id="3270bec5-e0c9-412b-b813-b18c2a09424f" class="">If I spend a ton of time on smtn feels like overoptimizing little things that don&#x27;t add much value, done &gt; perfect seeps into my head and I keep thinking no one notices the details, no one cares if this footage is colour graded or not, no one cares if your animations are eased, no one cares no one cares no one will even notice. And I feel like I need to get stuff out fast fast fast &quot;<em>if you don&#x27;t upload for some time you lose your audience.&quot;</em></p><p id="c4caf689-1e7b-4cb8-9444-62c9e1c4f54f" class="">Actually,</p><p id="ac381a6a-e8c2-4a3a-87f1-e84b06a62a56" class="">The details are what makes me appreciate Oversimplified and Grey content.</p><p id="6ba1397f-f75d-4cdf-a1da-5cb87b4105e4" class="">The details is why Harrison Chiu&#x27;s APP vid stood out to me.</p><p id="25ff7986-84b7-47e0-bb88-39e14289dc1a" class="">The details are why 3b1b&#x27;s math livestreams are so high quality.</p><p id="c4569fc4-4484-47f3-996c-fd207c6322f9" class="">I notice details.</p><p id="9a3a6c05-9272-45f2-abe2-627067209c81" class="">Details are in the content I appreciate. The details are half the reason why I love the creators I love.</p><p id="fda12567-9867-4f80-bd92-9af44f764120" class="">The sheer <em>hours, making sure every fact is correct, and color grading and animations with just the right amount of ease </em>is why I like the creators I love. The fact that Oversimplified puts out 2 vids every 4 months stand out to me. Waitbutwhy&#x27;s 40 000 word article - long enough to be a book. Nicky Case&#x27;s explorable explanations. Kurzgesagt&#x27;s <em>thousands</em> of hours per 8 min video. CGP Grey for every vid you see, there are 2 discarded scripts that you don&#x27;t. Those are the things that made me aspire to be a creator 2 years ago. Those are the things that made me proud of putting videos out: the fact that you put <em>work </em>into it. I don&#x27;t want to make content that is lower effort than my max.</p><p id="7845f635-9a58-46f8-82ad-27a8df2203af" class="">Oversimplified fans appreciate him <em>because </em>of his infrequent vids. Scarcity increases the perception of value. Infrequent uploads means that people value each upload 10x more. (If you&#x27;ve already established a quality standard.)</p><p id="ab45a6d2-12aa-4ae1-97d9-1ebaf3209e65" class="">
+</p><h2 id="2391118d-6aed-498e-a2db-11cc0e5eaa79" class="">Closing</h2><p id="7229c547-7cb5-40ce-a3ec-f0c832fabc31" class="">So, I said,</p><blockquote id="bd9f5d40-77f4-4842-8af1-e89d60be8ffc" class="">No one reads newsletters. Most of the text you write might not get read by anyone.</blockquote><p id="ca085e31-9c85-4142-9ee5-c3d9844b1c76" class="">
+</p><p id="be000ee4-0217-4387-84fa-cb56fee07c57" class="">I also said,</p><blockquote id="894b0e94-a490-4dad-b96f-34ab0c331161" class="">no one notices the details, no one cares if this footage is colour graded or not, no one cares if your animations are eased, no one cares no one cares no one will even notice</blockquote><p id="4fef38a2-e3f2-47cc-895b-c9866fb8b6eb" class="">
+</p><p id="348091da-3cf2-4893-acf2-b18a105f302b" class="">Prove me wrong. If you read this newsletter to the end, please tell me. I actually want to know if people are reading to the end. If you like the comics, tell me. Or else I might stop making them, as they do take a lot of time.</p><p id="3d223d60-8f2d-49d7-b357-c4980195e1f1" class="">If you like this type of ... article? essay? blog post? tangle of words? also let me know. This is my first one. Although I do plan to write more in the near future, because I like them:)</p><p id="4cda57ef-7a0d-43b1-91c1-1fb60b88722f" class="">
+</p><p id="b5af4370-b26c-4d32-ac74-25758442ce15" class="">You can contact me on any of my social media. </p><p id="01183112-18a7-4494-b0f7-5a2a70bc3a36" class="">You can even write an anonymous message in my <a href="https://lauragao.ca/feedback">sept newsletter feedback form</a>.</p><p id="6d72d1c3-03b6-47bc-93a3-ea207802d639" class="">
+</p><p id="07646bb6-e3d1-4997-8460-3db67114cf79" class="">❤️ Laura</p><p id="556d26c2-5191-4c41-9345-22e486dc4ff0" class="">
+</p>
+<p><a href="https://lauragao.ca">Website</a>  <a href="https://twitter.com/laurgao">Twitter</a>  <a href="https://www.youtube.com/channel/UCstSEHcCLMGdac9wkbMeAIw">Youtube</a>  <a href="https://laurgao.medium.com">Medium</a>  <a href="https://www.linkedin.com/in/laurgao">Linkedin</a>  <a href="https://github.com/laurgao">Github</a></p>
+
+</div></article></body></html>
