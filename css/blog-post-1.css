@@ -15,3 +15,7 @@ blockquote {
 .subtitle {
 	margin-bottom: 2em;
 }
+
+img {
+	max-width: 700px;
+}

@@ -19,3 +19,7 @@ blockquote {
 .meta {
 	margin: 2em 0;
 }
+
+img {
+	max-width: 800px;
+}
