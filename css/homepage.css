@@ -24,6 +24,10 @@ header p {
 	letter-spacing: 0.1em;
 }
 
+nav {
+	max-width: 750px;
+}
+
 /* Body - Blog post listings */ /* Inside main tag */
 
 main a:hover {

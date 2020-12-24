@@ -1,0 +1,21 @@
+@media only screen {
+	article {
+		max-width: 800px;
+	}
+	nav ul {
+		max-width: 850px;
+	}
+}
+
+main {
+	font-size: 0.9em;
+}
+
+blockquote {
+	font-style: italic;
+	margin: 30px 0;
+}
+
+.meta {
+	margin: 2em 0;
+}

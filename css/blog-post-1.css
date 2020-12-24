@@ -1,0 +1,17 @@
+@media only screen {
+	article {
+		max-width: 700px;
+	}
+
+	nav ul {
+		max-width: 750px;
+	}
+}
+
+blockquote {
+	font-size: 1.25em;
+}
+
+.subtitle {
+	margin-bottom: 2em;
+}
