@@ -1,0 +1,50 @@
+@media only screen {
+	article {
+		max-width: 800px;
+	}
+	nav ul {
+		max-width: 850px;
+	}
+}
+
+main {
+	font-size: 0.9em;
+	line-height: 2em;
+}
+
+blockquote {
+	font-style: italic;
+	margin: 30px 0;
+}
+
+.meta {
+	margin: 2em 0;
+}
+
+img {
+	max-width: 800px;
+}
+
+figcaption {
+	line-height: 1em;
+}
+
+div.image {
+	margin: 3em 0;
+}
+
+/* */
+
+#updately {
+	margin-left: 300px;
+}
+
+.twitter-tweet {
+	margin-left: 100px;
+}
+
+.meta.two {
+	font-size: 0.7em;
+	margin: 3em 0;
+}
+

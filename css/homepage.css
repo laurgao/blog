@@ -63,3 +63,12 @@ img {
 .right p, .right h2 {
 	text-align: right;
 }
+
+
+/**** */
+
+.dash {
+	border: 3px black dashed;
+	padding: 30px;
+	border-radius: 50px;
+}
