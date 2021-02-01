@@ -48,3 +48,20 @@ div.image {
 	margin: 3em 0;
 }
 
+.callout {
+	font-size: 1.5em;
+	width: 80%;
+	margin-left: 10%;
+	opacity: 0.7;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+#dec-newsletter {
+	margin-left: 130px;
+}
+
+
+div#footnotes p#o {
+	margin-bottom: 4em;
+}

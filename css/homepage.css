@@ -72,3 +72,8 @@ img {
 	padding: 30px;
 	border-radius: 50px;
 }
+
+.meta {
+	opacity: 0.5;
+	margin-top: 1em;
+}
