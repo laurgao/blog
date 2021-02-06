@@ -77,3 +77,9 @@ img {
 	opacity: 0.5;
 	margin-top: 1em;
 }
+
+.subtitle {
+	opacity: 0.5;
+	font-style: italic;
+	margin-bottom: 1em;
+}
