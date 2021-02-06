@@ -65,3 +65,7 @@ div.image {
 div#footnotes p#o {
 	margin-bottom: 4em;
 }
+
+iframe {
+	margin: 2em 0;
+}
