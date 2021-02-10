@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>How I built the quantum search algorithm in 2 weeks without prior knowledge</title>
+    <link rel="stylesheet" type="text/css" href="css/blog-post.css">
+    <link rel="stylesheet" type="text/css" href="css/blog-post-3.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Laura Gao's Blog">
+    <meta name="keywords" content="Blog">
+    <meta name="author" content="Laura Gao">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="blog"><a href="index.html">Laura Gao's Blog</a></li>
+            <li class="regular-li"><a href="index.html">Home</a></li>
+            <li class="regular-li"><a href="https://twitter.com/laurgao" target="_blank">Daily Wisdom</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <header>
+            <h1 class="page-title">How I built the quantum search algorithm in 2 weeks without prior knowledge</h1>
+            <p class="subtitle">and how you could too! - My quantum computing journey so far</p>
+        </header>
+
+        <div class="meta two">
+            <hr>
+            <p>Laura Gao</p>
+            <p>10 Feb 2021 • 7 min read</p>
+        </div>
+
+        <main>
+            <p>Picture this: in 2 weeks, you have to speak in front of 70 people about something you built in quantum computing.</p>
+            <p>Today, you don't know anything about quantum computing beyond a few analogies presented in popular science.</p>
+            <p>That's where I was on December 28, 2020.</p>
+            <p>Here's how I went from zero to implementing my own algorithm in 11 days.</p>
+
+            <iframe width="800" height="450" src="https://www.youtube.com/embed/14jMBpbLzBg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <h2>1. Learn the Basics</h2>
+
+            <p>I didn't know where to start, so I did a simple Google search of "quantum computing basics." One of the items that came up was the IBM Qiskit YouTube series, which is what I chose to start with because IBM is credible.</p>
+            <p><em>Note: make the distinction between popular science QC basics and the math-y ones. Searching up "quantum computing basics" will yield many edu-tainment videos such as <a href="https://www.youtube.com/watch?v=QuR969uMICM">this</a> (or <a href="https://www.youtube.com/watch?v=JhHMJCUmq28">this</a>). You cannot learn QC from Kurzgesagt (as much as I love them). An understanding of QC requires understanding of the mathematical and technical details. Rule of thumb: If a video/article does not talk about math, you cannot learn QC from it. (Including this one - this blog post has no math, so therefore you can't learn QC from it.)</em></p>
+            <p>I went through the first 3 videos of the Qiskit series - setting up my IBM Q account, linking it with Anaconda, and coding a simple CNOT circuit. Then came the video about quantum gates, where it was recommended that I learn the gates from their website before progressing through the series.</p>
+            <p>This is how I found out about the Qiskit docs. (Note: this is different from the Qiskit textbook. Yes, it was confusing for me as well.)</p>
+            <p>I started reading through the Qiskit docs in chronological order. However, I quickly hit a roadblock within the first few pages - not understanding the linear algebra. I couldn't really progress forward as I wasn't really understanding.</p>
+            <p>So, I went on a hunt for more. Luckily, I'm part of TKS, so I can go on the quantum computing channel in the TKS Slack to look for resources. I stumbled across one that Pavan posted: the Quantum Cxountry <a href="https://quantum.country/search">essay</a> for Grover's Search Algorithm by Andy Matuschak and Michael Nielsen.</p>
+            <p>This essay recommended me to learn the basics from their earlier essay, Quantum Computing for the Very Curious. (Also known as QCVC)</p>
+            <p>QCVC was hands down the best QC resource. It has zero fluff and isn't scared to work out the math, a problem I had with many other quantum resources. (Well, other resources: either they're basic, high level, and don't scratch the math at all; or they go into the linear algebra right away at a pace where a beginner like me cannot follow along. If you're looking to get into QC, I think reading QCVC is the best way.</p>
+            <p>I started reading QCVC on ~day 3 of my QC journey. I worked through all the math and finished it in ~5 hours on one day.</p>
+            <p>Note, my background with linear algebra is minimal. I know linalg up to multiplying matrices. (Which TBH is all you need to know - if you know how to multiply matrices, you're good.)</p>
+
+            <h2>2. Grover's Algorithm Logic & Intuition</h2>
+
+            <p>After reading QCVC, I read the Grover's Algorithm essay by the same authors. I read this essay over ~2 days and worked through ~80% of the math. I would recommend working through as much of the math as you can.</p>
+            <p>Now, I had good intuition and mathematical knowledge of how Grover's Algorithm works. Time to learn to code.</p>
+
+            <h2>3. Build Grover's Algorithm</h2>
+
+            <p>First, I went to IBM's textbook page on Grover's algorithm. The notiation here was a bit different from quantum country, so I made sure to work through the math again to get familiar with & make sure I know what they're saying.</p>
+            <p>Next, I copy pasted the code they provide on the page. I ran it on my jupyter notebook.</p>
+            <p>At this point, it was well into the 2nd week with about 5 days left till the presentation. Once I got the copy pasted code to run effectively, I went to grind the presentation right away.</p>
+            <p>But… after 3 or so days, I wasn't happy with my copy and pasted code. On Friday morning, 24 hours before my presentation, I deleted the code and re-wrote it on my own with the logic I knew from the quantum knowledge essay. I spent ~2 hours on this one morning. It took less time than I thought.</p>
+            <p>Or more specifically, I rewrote the 2 main components of the algorithm: the Oracle and the Diffuser.</p>
+
+            <h2>Extra: More intuition & The QC content landscape</h2>
+            <p>If you really want to understand quantum computing, you have to know the technical weedy math details - what all the gates do to the matrices of qubits. When building Grover's Algorithm - yes you can do it by just dragging and drop gates, but I'd feel unsatisfied unless I knew <em>why</em> the gates work, not just <em>how</em> they work.</p>
+            <p>I had a hard time understanding the intuition, specifically how the matrix representations of qubits relates to the geometric ones. (Geometric representation of qubits = Bloch sphere & waves) <a href="https://pavanjayasinha.medium.com/but-what-is-a-quantum-phase-factor-d05c15c321fe">This article</a> by Pavan on phase factors helped me… but still left me with more questions.</p>
+            <p>QC is hard. Be prepared for the treacherous journey if you choose to embark on it. Whenever I learn something new within QC, I'm in a superposition of simoutaneously understanding better and being more confused. (Yea, I know, terrible joke 🙄)</p>
+            <p>I found that content that aims to teach QC generally falls into 2 categories:</p>
+            <ol>
+                <li>Popsci that doesn't explain the math - this includes Ted Talks and edutainment YouTube videos.</li>
+                <li>Dives into the math without much precursor - it's easy for beginners to get lost. A lot of content that falls here is written by professionals, this includes research papers, and in my opinion, the Qiskit docs and even Musty Thoughts VQA articles. (No no they're great, just maybe I'm small brain and can't work out all the math.) If you know QC, you'll understand these articles, and if you don't know QC, you won't understand. As a person who has understood the math, you may think an explanation is clear while someone who does not understand will not think the explanations are clear. These are industry experts that may be falling into the Knowledge Paradox - they know the field so well that they are unable to sympathize with someone that doesn't understand.</li>
+            </ol>
+            <p>This is what makes quantum country essays amazing - it strikes the perfect balance between both sides.</p>
+            <p>Right now, I'm trying to learn more QC: Shor's Algorithm, QML, and VQEs. I found that it's difficult to understand them, because all resources are either too technical or not technical enough. I'm having much more trouble learning QML than Grover's algorithm. If only every algorithm had a quantum country essay…</p>
+
+            <h2>TL;DR / All resources compiled in one place / More tips</h2>
+            <p>This blogpost does not talk about how Grover's algorithm works, only how I learned it.</p>
+            <ul>
+                <li>Highly recommended: <a href="http://quantum.country">quantum.country</a> essays (I've read the first 3, and they're all great! QC professionals <a href="https://www.mustythoughts.com/resources.html">say</a> the same thing.)</li>
+                <li><a href="https://qiskit.org/textbook/ch-algorithms/grover.html">For implementation of Grover's algo on Qiskit</a></li>
+                <li><a href="https://www.youtube.com/playlist?list=PLOFEBzvs-Vvp2xg9-POLJhQwtVktlYGbY">Intro to QC video series</a></li>
+                <li><a href="https://pavanjayasinha.medium.com/but-what-is-a-quantum-phase-factor-d05c15c321fe">But what is a quantum phase factor?</a></li>
+                <li>I keep a live doc where I dump all the QC questions I have.</li>
+                <li>Another doc where I dump any interesting resources I stumble across</li>
+                <li>Another doc where I dump any topics I may or may not go into in the future. This is just so I'll never come to a stage where I have no idea what to do next.</li>
+                <li><a href="https://www.mustythoughts.com/resources.html">Great list of resources by Michał Stęchły</a></li>
+            </ul>
+            <br>
+            <p><a href="https://www.youtube.com/watch?v=14jMBpbLzBg">My presentation on Grover's Algorithm</a></p>
+            <p><a href="https://github.com/laurgao/grover-search">Github repo</a></p>
+            <br>
+
+            <p>Hope you found something useful here. Have a good day!</p>
+            <br>
+            <br>
+            <p>Connect w/ me @laurgao on Twitter and most places. Or not. Your loss.</p>
+            <br>
+            <br>
+
+            <p>(Jkjkjk... unless? :p)</p>
+
+            <div id="footnotes">
+                <h2>Release Notes</h2>
+                <p>I wrote a blog post about how I learned Grover's Algorithm instead of explaining Grover's Algorithm. Why? Because this is how I can see value being added. If I choose to explain Grover's algorithm, there are different levels of depth I can choose to go:</p>
+                <ul>
+                    <li>Go super deep and super technical: fully flush out the math/logic/intuition, the cirucit, and the code.</li>
+                    <li>Go mathy: fully flush out the math/logic/intuition and the circuit, but not the code. (This is quantum country)</li>
+                    <li>Go mathy, except without fully flushing out the intuition behind the math: displaying the equations and the circuit diagrams. Not fully flushing out what<em> each gate</em> does in the circuit either. (This is where I find quite a few articles written by TKS students, such as <a href="https://medium.com/@ziyu.lili.maggie/grovers-search-algorithm-3233592820d3">this</a> and <a href="https://richapandya273.medium.com/using-vqes-to-simulate-chemistry-86898571de8d">this</a>. Also where I think the Qiskit docs belongs.)</li>
+                    <li>Intuition based: explain the intuition behind how the algorithm works geometrically alongside the circuit, but not the code or math. (What I attempted in my presentation)</li>
+                    <li>The short/popsci explanation: "Grover's search algorithm allows you to find objects in the square root of the amount of time that classical computers would take... exponential growth go vroom vroom..." Vague terms like "Grover's algo <em>searches all states at once</em> and then you can <em>manipulate the superposition</em> to bring out the state we're looking for." (This is what I hear from edutainment, short buzzfeed 600 words style articles, and what most people say when I talk to them."</li>
+                </ul>
+
+                <p>I suppose you can think of it like a spectrum from least complex/shortest/shallowest to most complex/longest/deepest.</p>
+
+                <p>Next, I analyzed what I would do if I tried to go with each of these cases.</p>
+                <ul>
+                    <li>1 & 2: If I flush out the math/logic & the circuit, this will probably be a 1 hour read. It'll be something along the length of the quantum country essay. Even longer if I explain the code. I don't mind putting in lots of work into a long essay, I actually think that this is a task that I would enjoy -- devoting lots of time to making a high quality piece of work. However, I think this might be a waste of human resources: quantum country's essay on Grover's algo does a great job. Another one doing the same job will not benefit people much. The quantum country essay probably took weeks to write and months to perfect, it's not worth it to devote a lot of time into something that won't provide much benefit.</li>
+                    <li>3: I feel like articles like this are ones that will be understood by someone who knows Grover's algorithm and won't be helpful for someone's who's genuinely trying to learn. Because it doesn't fully flush out the math.</li>
+                    <li>4: Similarly, this explains the intuition and may be entertaining, but doesn't help someone genuinely learn. To resate, rule of thumb: if a video/article does not talk about math, you cannot learn QC from it. </li>
+                    <li>5: Same as 4: You can't learn QC without knowing the math. Another popsci representation of QC will not help anyone. I do not want to create content that has zero potential to be helpful.</li>
+                </ul>
+                <p>What I'm saying is that for a beginner to QC, any non-fully-flushed-out-article will not be wholistic enough to be helpful to a beginner. Nothing less than the 1 hour long quantum country essay would be helpful.</p>
+                <p><blockquote>Then, why is this article helpful?</blockquote></p>
+                <p>I hope it is helpful... I could warn people about common pitfalls in trying to learn QC that I have experienced.</p>
+                <p>Instead of trying to re-create a quantum country article, I will just point people towards it ;)</p>
+            </div>
+
+        </main>
+
+    </article>
+
+    <footer>
+        <p><a href="https://blog.lauragao.ca">Laura Gao's Blog</a> © 2021. <a href="https://twitter.com/laurgao" target="_blank">Twitter</a></p>
+    </footer>
+
+</body>
+</html>
