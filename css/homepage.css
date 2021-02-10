@@ -47,17 +47,23 @@ main a:hover {
 }
 
 img {
-	max-width: 350px;
+	max-width: 700px;
+}
+
+.dash img {
+	margin-bottom: 1em;
 }
 
 .left img {
 	float: left;
 	margin-right: 50px;
+	max-width: 350px;
 }
 
 .right img {
 	float: right;
 	margin-left: 50px;
+	max-width: 350px;
 }
 
 .right p, .right h2 {
