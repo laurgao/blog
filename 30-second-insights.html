@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>30 Second Insights</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/blog-post.css">
+	<link rel="stylesheet" type="text/css" href="css/homepage.css">	
+	<link rel="stylesheet" type="text/css" href="css/30-second-insights.css">
+</head>
+<body>
+	<header>
+		<img src="img/30-second-insights/green.png">
+		<div>
+			<h1>30 Second Insights</h1>
+			<p>Aiming to be the highest value-density location on the Internet.</p>
+			<div class="sub-sub-title">
+				<div id="group-up">
+					<p id="collection">A <strong>collection</strong> of short "articles" or "blog posts" that are each an approx 30 second read.</p>
+					<p id="few">Express ideas in as <strong>few</strong> words as possible.</p>
+				</div>
+				<div id="group-down">
+					<p id="fluff">Cut the <strong>fluff</strong>.</p>
+					<p id="navigate"><strong>Navigate</strong> via infinite scroll. Want a better navigation method? <a href="https://lauragao.ca" target="_blank">Contact me</a> and I'll make one just for you ;)</p>
+				</div>
+			</div>
+		</div>
+	</header>
+	<nav>
+		<img src="img/30-second-insights/green.png">
+        <ul>
+            <li id="blog"><a href="index.html">Laura Gao's Blog</a></li>
+            <li class="regular-li"><a href="index.html">Home</a></li>
+            <li class="regular-li"><a href='30-second-insights.html'>30 Second Insights</a></li>
+            <li class="regular-li"><a href="https://twitter.com/laurgao" target="_blank">Daily Wisdom</a></li>
+        </ul>
+    </nav>
+    <article>
+    	<h2>See the pain</h2>
+    	<div class="meta">
+    		<p>Feb 2021</p>
+    	</div>
+    	<p>For the ones who feel bitter about how they were raised and thus wants to inflict harm onto society, if they understood the pain they caused, would they still? My Dad feels so deeply to drive safely because he understands the pain his parents, siblings, spouse and kids would feel if something were to happen. <span class="popup" onclick="footnote1()">[1]<span class="popuptext" id="footnote1">Not wanting to <em>die</em> out of empathy -- that's some next level un-selfish-ness.</span></span> Restorative justice allows these people to see the pain they caused firsthand. Many criminals have experienced similar levels of pain before and thus can likely relate. Restorative justice makes criminals no longer want to commit crime. <span class="popup" onclick="footnote2()">[2]<span class="popuptext" id="footnote2">This is a root cause solution.</span></span></p>
+    	
+    	<p>If less people commit crime and then there are less people the next generation who grow up in a crime-filled environment. <span class="popup" onclick="footnote3()">[3]<span class="popuptext" id="footnote3">This is a positive feedback loop.</span></span></p>
+		<p>Solutions that address the root cause will create a positive feedback loop. <span class="popup" onclick="footnote4()">[4]<span class="popuptext" id="footnote4">Think about this when considering the solution you'll pitch to the UN! Background: I'm doing a consulting challenge with the United Nations.</span></span></p>
+    </article>
+    <article>
+    	<h2>Asking "why" impedes execution</h2>
+    	<div class="meta">
+			<p>Feb 2021</p>
+		</div>
+    	<p>Questioning why you work hard is all unicorns and philosophical rainbows until it starts to impede your ability to execute. It's hard to focus on <em>how</em> [to do something] when you're questioning <em>why</em> [you're doing it].</p>
+    	<p>How to combat this? I haven't figured it out yet. </p>
+    </article>
+    <article>
+		<h2>The Value of Exploration</h2>
+		<div class="meta">
+			<p>Feb 2021</p>
+		</div>
+		<main>
+			<p>A machine learning model will not go far if it never explores. It cannot spend its full training time on optimizing for the immediate steepest gradient, or else the model will get stuck in local minima. It must take some time to wander around. This is dubbed the balance between <em>exploitation</em> and <em>exploration.</em></p>
+			<p>This applies to humans too. It's easy to get caught up in relentless exploitation; sprinting up the nearest hill as fast as you can. That's what I've been doing, until today, when I fell into a rabbit hole of David Perell's essays (here are a few I loved the most). I got to say, after weeks of reading nothing thoroughly but quantum computing research papers, I've forgotten how it feels to be captured by exciting ideas and worldviews. Even Perell writing something such as "Choosing to learn in public is the best career decision I’ve ever made" gets me so excited to write.</p>
+			<p>In machine learning, we generally want an 80/20 split between these two Es. Most of your time will be spent building towards your goals, but never forget to take that 20% to be a lifelong learner.</p>
+
+			<div class="image">
+				<img src="img/30-second-insights/exploitation-exploration.png">	
+			</div>
+			
+		</main>
+	</article>
+
+	<script>
+	// When the user clicks on div, open the popup
+	function footnote1() {
+		var popup = document.getElementById("footnote1");
+		popup.classList.toggle("show")
+	}
+
+	function footnote2() {
+	  var popup = document.getElementById("footnote2");
+	  popup.classList.toggle("show");
+	}
+
+	function footnote3() {
+		var popup = document.getElementById("footnote3");
+		popup.classList.toggle("show")
+	}
+
+	function footnote4() {
+		var popup = document.getElementById("footnote4");
+		popup.classList.toggle("show")
+	}
+	</script>
+</body>
+</html>
