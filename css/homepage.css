@@ -5,13 +5,13 @@ body {
 /* Header */
 
 header {
-	background-color: black;
 	color: white;
 	text-align: center;
 	padding: 150px 0;
 	font-size: 20px;
 	z-index: 10;
 	position: relative;
+	background-color: black;
 }
 
 header div {
@@ -24,9 +24,34 @@ header p {
 	letter-spacing: 0.1em;
 }
 
+.sub-sub-title{
+	position: absolute;
+	top: 0;
+}
+
+.sub-sub-title p {
+	opacity: 0;
+	transition-duration: 250ms;
+}
+
+.sub-sub-title p:hover{
+	opacity: 0.25;
+}
+
+
+header a {
+	transition-duration: 250ms;
+}
+
+header a:hover {
+	text-decoration: underline;
+}
+
+
+/* moved: constant nav ul in style.css across all pages 
 nav ul {
 	max-width: 750px;
-}
+} */
 
 /* Body - Blog post listings */ /* Inside main tag */
 
@@ -75,7 +100,7 @@ img {
 
 .dash {
 	/* border: 3px black dashed; */
-	padding: 30px;
+	padding: 15px 0;
 	border-radius: 50px;
 }
 

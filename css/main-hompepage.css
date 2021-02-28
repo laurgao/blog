@@ -1,0 +1,19 @@
+header {
+	background-color: black;
+}
+
+.sub-sub-title p {
+	max-width: 400px;
+}
+
+#ideas {
+	position: absolute;
+	left: 10%;
+	top: 200px;
+}
+
+#few {
+	position: absolute;
+	left: 70%;
+	top: 30px;
+}

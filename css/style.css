@@ -38,6 +38,7 @@ nav {
 
 nav ul {
 	margin: auto;
+	max-width: 850px;
 }
 
 nav a {
@@ -46,6 +47,7 @@ nav a {
 
 nav li {
 	display: inline;
+	transition-duration: 150ms;
 }
 
 

@@ -2,9 +2,10 @@
 	article {
 		max-width: 800px;
 	}
+	/* moved: constant nav ul in style.css across all pages 
 	nav ul {
 		max-width: 850px;
-	}
+	} */
 }
 
 main {
@@ -39,22 +40,9 @@ div.image {
 	margin-left: 300px;
 }
 
-.twitter-tweet {
-	margin-left: 100px;
-}
-
 .meta.two {
 	font-size: 0.7em;
 	margin: 3em 0;
-}
-
-.callout {
-	font-size: 1.5em;
-	width: 80%;
-	margin-left: 10%;
-	opacity: 0.7;
-	margin-top: 2em;
-	margin-bottom: 2em;
 }
 
 #dec-newsletter {

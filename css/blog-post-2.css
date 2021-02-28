@@ -2,9 +2,11 @@
 	article {
 		max-width: 800px;
 	}
+
+	/* moved: constant nav ul in style.css across all pages 
 	nav ul {
 		max-width: 850px;
-	}
+	} */
 }
 
 main {
