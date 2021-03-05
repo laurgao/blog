@@ -4,8 +4,21 @@
 	<title>December Newsletter - Release Notes</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/blog-post.css">
-	<link rel="stylesheet" type="text/css" href="css/blog-post-2.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
+    <style type="text/css">
+        article {
+            font-size: 19px;
+        }
+        .meta {
+        	margin: 2em 0;
+        }
+        main p {
+            margin: 1em 0;
+        }
+        main {
+            line-height: 1.5em;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -17,7 +30,7 @@
         </ul>
     </nav>
 
-	<main>
+	<main class="two">
 		<article>
 			<h1 class="page-title">December Newsletter - Release Notes</h1>
 			<p class="subtitle">Total time spent: 6.5h</a></p>
@@ -52,35 +65,41 @@
 
 			<ul>
 				<li>Colour balancing — My room's lights are atrociously yellow-orange. These pictures would look unprofessional and hurt your eyes without colour balancing. Just compare this:</li>
-				<div class="image">
-					<img src="img/dec-2020/quantum-not-graded.jpg">
-					<img src="img/dec-2020/quantum.jpg">
-					<figcaption>Maybe I went overboard and it's a bit too blue...</figcaption>
+				<div style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px; margin-top: -1.5em;">
+					<figure>
+						<img src="img/dec-2020/quantum-not-graded.jpg">
+					</figure>
+					<figure>
+						<img src="img/dec-2020/quantum.jpg">
+					</figure>
 				</div>
-				<div class="image">
+				<figcaption style="margin-top: -1.5em; font-size: 0.8em;">Maybe I went overboard and it's a bit too blue...</figcaption>
+
+				<figure>
 					<img src="img/dec-2020/photoshop-colour-balance.PNG">
-					<figcaption>The colour balance settings of the cube picture.</figcaption>
-				</div>
+					<figcaption style="font-size: 0.8em">The colour balance settings of the cube picture.</figcaption>
+				</figure>
+
 				<li>Converting to JPG and reducing file size — JPEGs use less space than PNGs just for being JPGs. 
-					<div class="image">
+					<figure>
 						<img src="img/dec-2020/podcastin.jpg">
-						<figcaption>This exact file is 1.4 MB as a PNG and 0.6 MB as a JPEG.</figcaption>
-					</div>
+						<figcaption style="font-size: 0.8em">This exact file is 1.4 MB as a PNG and 0.6 MB as a JPEG.</figcaption>
+					</figure>
 				But that's just with the file conversion. Additionally, you can reduce the quality on Photoshop's export settings:
-					<div class="image">
+					<figure>
 						<img src="img/dec-2020/photoshop-reduce-quality.PNG">
-					</div>
+					</figure>
 				The raw files from my camera are 3-4 MB. I change them to about 1MB each. Now that I think about it, 1MB is still a lot 😔 I'll probably make the files even smaller in the next newsletter.</li>
 
-					<div class="image">
+					<figure>
 						<img src="img/dec-2020/tiny-images.JPG">
-						<figcaption> It's okay if they're lower quality, right? No one zooms in on these tiny newsletter pictures... right?</figcaption>
-					</div>
+						<figcaption style="font-size: 0.8em"> It's okay if they're lower quality, right? No one zooms in on these tiny newsletter pictures... right?</figcaption>
+					</figure>
 			</article>
 	</main>
 
     <footer>
-        <p><a href="https://blog.lauragao.ca">Laura Gao's Blog</a> © 2021. <a href="https://twitter.com/laurgao">Twitter</a></p>
+        <p><a href="index.html">Laura Gao's Blog</a> © 2021. <a href="https://twitter.com/laurgao">Twitter</a></p>
     </footer>
 
 </body>

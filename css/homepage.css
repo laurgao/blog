@@ -1,7 +1,3 @@
-body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
 /* Header */
 
 header {
@@ -23,6 +19,8 @@ header p {
 	font-weight: 200;
 	letter-spacing: 0.1em;
 }
+
+/* sub sub title */
 
 .sub-sub-title{
 	position: absolute;
@@ -47,22 +45,14 @@ header a:hover {
 	text-decoration: underline;
 }
 
-
-/* moved: constant nav ul in style.css across all pages 
-nav ul {
-	max-width: 750px;
-} */
+/**** */
 
 /* Body - Blog post listings */ /* Inside main tag */
-
-main a:hover {
-	color: grey;
-}
 
 .grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	max-width: 700px;
+	max-width: 750px;
 	margin: 50px auto;
 	grid-row-gap: 50px;
 }
@@ -72,7 +62,7 @@ main a:hover {
 }
 
 img {
-	max-width: 700px;
+	max-width: 100%;
 }
 
 .dash img {
@@ -95,14 +85,22 @@ img {
 	text-align: right;
 }
 
+.grid .left, .grid .right, .grid .dash {
+	transition-duration: 500ms;
+	background-color: white;
+	padding: 20px;
+}
+
+.grid .left:hover, .grid .right:hover, .grid .dash:hover {
+	border-radius: 20px;
+	background-color: rgba(221, 221, 240, 0.15);
+	opacity: 0.65;
+}
+
 
 /**** */
 
-.dash {
-	/* border: 3px black dashed; */
-	padding: 15px 0;
-	border-radius: 50px;
-}
+/* post specific */
 
 .meta {
 	opacity: 0.5;

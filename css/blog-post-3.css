@@ -1,59 +1,8 @@
-@media only screen {
-	article {
-		max-width: 800px;
-	}
-	/* moved: constant nav ul in style.css across all pages 
-	nav ul {
-		max-width: 850px;
-	} */
-}
 
-main {
-	font-size: 0.9em;
-	line-height: 1.75em;
-}
 
-blockquote {
-	font-style: italic;
-	margin: 30px 0;
-}
 
 .meta {
 	margin: 2em 0;
 }
 
-img {
-	max-width: 800px;
-}
 
-figcaption {
-	line-height: 1em;
-}
-
-div.image {
-	margin: 3em 0;
-}
-
-/* */
-
-#updately {
-	margin-left: 300px;
-}
-
-.meta.two {
-	font-size: 0.7em;
-	margin: 3em 0;
-}
-
-#dec-newsletter {
-	margin-left: 130px;
-}
-
-
-div#footnotes p#o {
-	margin-bottom: 4em;
-}
-
-iframe {
-	margin: 2em 0;
-}
