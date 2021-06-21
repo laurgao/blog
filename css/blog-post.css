@@ -110,11 +110,11 @@ div.image {
 
 /* General paragraph stuff */
 
-main p {
+main p, article p {
 	margin: 1.5em 0;
 }
 
-main {
+main, article {
 	line-height: 1.75em;
 }
 
